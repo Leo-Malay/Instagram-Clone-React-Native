@@ -10,7 +10,7 @@ import AccountStyle from '../style/Account';
 // Demo Image and data
 import {People_Malay} from '../assets/Images';
 
-class Account extends Component {
+export default class Account extends Component {
   constructor(navigation) {
     super(navigation);
     this.state = {navigation: navigation};
@@ -64,5 +64,3 @@ class Account extends Component {
     );
   }
 }
-
-export default Account;

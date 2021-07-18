@@ -3,10 +3,20 @@ import Ion from 'react-native-vector-icons/Ionicons';
 import FA from 'react-native-vector-icons/FontAwesome';
 import FA5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
+import Feather from 'react-native-vector-icons/Feather';
 
 const IonIcons = ({props}) => {
   return (
     <Ion
+      name={props.name}
+      size={props.size || 20}
+      color={props.color || '#000'}
+    />
+  );
+};
+const FeatherIcons = ({props}) => {
+  return (
+    <Feather
       name={props.name}
       size={props.size || 20}
       color={props.color || '#000'}
@@ -41,4 +51,4 @@ const EntypoIcons = ({props}) => {
   );
 };
 
-export {IonIcons, FAIcons, FA5Icons, EntypoIcons};
+export {IonIcons, FeatherIcons, FAIcons, FA5Icons, EntypoIcons};

@@ -6,7 +6,7 @@ import {ShowPosts} from '../component/Post';
 import {HomeHeader} from '../component/sub/HeaderBar';
 // Style
 import General from '../style/General';
-class Home extends Component {
+export default class Home extends Component {
   constructor(navigation) {
     super(navigation);
     this.state = {navigation: navigation};
@@ -23,5 +23,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

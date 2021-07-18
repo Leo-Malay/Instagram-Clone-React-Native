@@ -5,6 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 // Importing Views.
 import Account from './src/views/Account';
+import NewAccount from './src/views/NewAccount';
 import AccountPreview from './src/views/AccountPreview';
 import Activity from './src/views/Activity';
 import Home from './src/views/Home';
@@ -13,12 +14,13 @@ import Reels from './src/views/Reels';
 import Welcome from './src/views/Welcome';
 import Settings from './src/views/Settings';
 import NewPost from './src/views/NewPost';
-import Messenger from './src/views/Messenger';
+import Messenger from './src/views/Messenger/Messenger';
+import Chat from './src/views/Messenger/Chat';
 // Components
 import {IonIcons, EntypoIcons} from './src/component/sub/Icons';
 // Tab Navigation
-const Tab = createBottomTabNavigator();
 const TabNav = () => {
+  const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
       initialRouteName="Home"
@@ -81,8 +83,8 @@ const TabNav = () => {
   );
 };
 // Stack Navigation
-const Stack = createStackNavigator();
 const StackNav = () => {
+  const Stack = createStackNavigator();
   return (
     <Stack.Navigator initialRouteName="Welcome">
       <Stack.Screen
@@ -90,8 +92,14 @@ const StackNav = () => {
         component={Welcome}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="NewAccount"
+        component={NewAccount}
+        options={{headerShown: false}}
+      />
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Messenger" component={Messenger} />
+      <Stack.Screen name="Chat" component={Chat} />
       <Stack.Screen
         name="AccountPreview"
         component={AccountPreview}

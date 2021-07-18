@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {View, Image} from 'react-native';
+import {View} from 'react-native';
 import {Button, Card, Input} from 'react-native-elements';
-import Instagram from '../assets/Instagram.png';
 // Style
 import General from '../style/General';
 export default class Welcome extends Component {
@@ -11,17 +10,40 @@ export default class Welcome extends Component {
       navigation: navigation,
       username: '',
       password: '',
+      email: '',
+      mobile: '',
+      name: '',
+      address: '',
       showLoading: false,
     };
   }
   render() {
     return (
       <View style={[General.Container, General.AlignCenter]}>
-        <Image source={Instagram} style={{position: 'absolute', top: 100}} />
         <Card containerStyle={{width: 350}}>
           <Card.Title style={[General.Bold, General.TextLarger]}>
-            Login
+            New Account
           </Card.Title>
+          <Input
+            placeholder="Name"
+            leftIcon={{type: 'ionicon', name: 'person-circle-outline'}}
+            onChangeText={value => this.setState({name: value})}
+          />
+          <Input
+            placeholder="Email"
+            leftIcon={{type: 'ionicon', name: 'mail-outline'}}
+            onChangeText={value => this.setState({email: value})}
+          />
+          <Input
+            placeholder="Address"
+            leftIcon={{type: 'ionicon', name: 'home-outline'}}
+            onChangeText={value => this.setState({address: value})}
+          />
+          <Input
+            placeholder="Mobile No."
+            leftIcon={{type: 'ionicon', name: 'call-outline'}}
+            onChangeText={value => this.setState({username: value})}
+          />
           <Input
             placeholder="Username"
             leftIcon={{type: 'ionicon', name: 'person-circle-outline'}}
@@ -34,20 +56,22 @@ export default class Welcome extends Component {
             onChangeText={value => this.setState({password: value})}
           />
           <Button
-            title="Login"
+            title="Journey Begins"
             type="solid"
             loading={this.state.showLoading}
             onPress={() => {
               this.setState({showLoading: true});
-              this.state.navigation.navigation.navigate('TabNav');
+              this.state.navigation.navigation.navigate('Welcome');
               this.setState({showLoading: false});
             }}
           />
           <Button
-            title="New Here? Create Account"
+            title="Already have an Account?"
             type="clear"
             onPress={() => {
-              this.state.navigation.navigation.navigate('NewAccount');
+              this.setState({showLoading: true});
+              this.state.navigation.navigation.navigate('Welcome');
+              this.setState({showLoading: false});
             }}
           />
         </Card>

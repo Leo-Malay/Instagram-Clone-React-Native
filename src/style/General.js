@@ -14,12 +14,7 @@ const General = StyleSheet.create({
   AlignRight: {flex: 1, alignItems: 'center'},
   Pad: {padding: 20},
   TextIn: {
-    borderWidth: 0.5,
-    borderRadius: 50,
-    paddingHorizontal: 20,
-    paddingVertical: 2,
     width: 300,
-    marginBottom: 20,
   },
 });
 

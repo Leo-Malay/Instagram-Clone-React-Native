@@ -26,17 +26,25 @@ const AvatarName = ({props}) => {
         {
           alignItems: 'center',
           padding: 5,
-          paddingHorizontal: 10,
+          paddingHorizontal: 6,
         },
       ]}>
-      <Image
-        source={props.image}
+      <View
         style={{
-          width: props.length || 60,
-          height: props.length || 60,
           borderRadius: 50,
-        }}
-      />
+          borderColor: '#dd2a7b',
+          borderWidth: 2,
+          padding: 2,
+        }}>
+        <Image
+          source={props.image}
+          style={{
+            width: props.length || 60,
+            height: props.length || 60,
+            borderRadius: 50,
+          }}
+        />
+      </View>
       <Text style={General.TextSmall}>{props.name}</Text>
     </View>
   );

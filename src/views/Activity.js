@@ -4,7 +4,7 @@ import {ScrollView, View} from 'react-native';
 import {Header} from '../component/sub/HeaderBar';
 // Style
 import General from '../style/General';
-class Activity extends Component {
+export default class Activity extends Component {
   constructor() {
     super();
     this.state = {};
@@ -18,5 +18,3 @@ class Activity extends Component {
     );
   }
 }
-
-export default Activity;

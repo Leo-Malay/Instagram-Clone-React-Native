@@ -1,22 +1,29 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
-// Components
-import {SearchHeader} from '../component/sub/HeaderBar';
-// Style
-import General from '../style/General';
+import {SearchBar} from 'react-native-elements';
 
-class Search extends Component {
+export default class Search extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      search: '',
+    };
   }
+  updateSearch = search => {
+    this.setState({search});
+  };
   render() {
     return (
       <View>
-        <SearchHeader />
+        <SearchBar
+          placeholder="Search"
+          onChangeText={this.updateSearch}
+          value={this.state.search}
+          clearIcon={true}
+          round
+          lightTheme={true}
+        />
       </View>
     );
   }
 }
-
-export default Search;

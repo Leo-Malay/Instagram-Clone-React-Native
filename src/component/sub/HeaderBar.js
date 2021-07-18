@@ -55,22 +55,7 @@ const HomeHeader = ({navigation}) => {
     </View>
   );
 };
-const SearchHeader = ({props}) => {
-  return (
-    <View style={localStyle.Container}>
-      <View
-        style={[localStyle.SearchBar, General.Inline, {alignItems: 'center'}]}>
-        <View style={localStyle.SearchInput}>
-          <IonIcons props={{name: 'search', size: 15}} />
-        </View>
-        <TextInput
-          placeholder="Search"
-          style={[General.TextMedium, {flex: 1, paddingStart: 10}]}
-        />
-      </View>
-    </View>
-  );
-};
+
 const AccountHeader = ({props, navigation}) => {
   return (
     <View style={[General.Inline, localStyle.Container]}>
@@ -151,4 +136,4 @@ const Header = ({props}) => {
   );
 };
 
-export {HomeHeader, SearchHeader, Header, AccountHeader, PreviewAccountHeader};
+export {HomeHeader, Header, AccountHeader, PreviewAccountHeader};

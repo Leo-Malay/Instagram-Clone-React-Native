@@ -7,7 +7,7 @@ import Stories from '../component/Stories';
 // Style
 import General from '../style/General';
 import AccountStyle from '../style/Account';
-class AccountPreview extends Component {
+export default class AccountPreview extends Component {
   constructor(navigation) {
     super(navigation);
     this.state = {navigation};
@@ -61,5 +61,3 @@ class AccountPreview extends Component {
     );
   }
 }
-
-export default AccountPreview;
