@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, Text} from 'react-native';
 import {Button, Card, Input} from 'react-native-elements';
 import Instagram from '../assets/Instagram.png';
 // Style
@@ -50,6 +50,10 @@ export default class Welcome extends Component {
               this.state.navigation.navigation.navigate('NewAccount');
             }}
           />
+          <Card.Divider />
+          <Text style={[{alignSelf: 'center'}, General.Bold]}>
+            Made with 💛 by Malay Bhavsar
+          </Text>
         </Card>
       </View>
     );

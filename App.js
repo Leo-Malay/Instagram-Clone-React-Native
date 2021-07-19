@@ -99,7 +99,11 @@ const StackNav = () => {
       />
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Messenger" component={Messenger} />
-      <Stack.Screen name="Chat" component={Chat} />
+      <Stack.Screen
+        name="Chat"
+        component={Chat}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="AccountPreview"
         component={AccountPreview}

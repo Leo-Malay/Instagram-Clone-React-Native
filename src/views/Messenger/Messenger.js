@@ -14,6 +14,18 @@ export default class Messenger extends Component {
           messages: [
             {type: 1, message: 'Hello'},
             {type: 0, message: 'Hello!!'},
+            {
+              type: 1,
+              message: 'You coming to the ballet in Hogwartz? If yes who with?',
+            },
+            {
+              type: 0,
+              message: 'Yes! I will be accompanied by Hermione Granger',
+            },
+            {
+              type: 1,
+              message: 'Awesome!',
+            },
           ],
         },
         {name: 'Angelina Johnson', image: '#', messages: []},
@@ -30,7 +42,10 @@ export default class Messenger extends Component {
               key={i}
               bottomDivider
               onPress={() => {
-                this.state.navigation.navigation.navigate('Chat', ele.messages);
+                this.state.navigation.navigation.navigate('Chat', {
+                  name: ele.name,
+                  messages: ele.messages,
+                });
               }}>
               <Avatar
                 source={{uri: ele.image}}

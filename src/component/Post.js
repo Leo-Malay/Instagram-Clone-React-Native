@@ -33,97 +33,8 @@ const localStyle = StyleSheet.create({
     marginRight: 20,
   },
 });
-// Demo images & data
-import {
-  People_Angelina,
-  People_Lily,
-  People_Mike,
-  People_Sofia,
-  People_Malay,
-  Mountain0,
-  Mountain1,
-  Mountain2,
-  Tree0,
-  Tree1,
-  Building,
-} from '../assets/Images';
 
-const ShowPosts = ({props, navigation}) => {
-  return (
-    <View>
-      <Post
-        key={0}
-        props={{
-          name: 'Malay Bhavsar',
-          avatar: People_Malay,
-          image: Mountain0,
-          date: '14-Jul-2021',
-          aboutMe:
-            'Software Engineer || Full Stack Developer\nMERN Stack Developer\nMail:- malaybhavsar.290@gmail.com',
-          navigation: navigation.navigation,
-        }}
-      />
-      <Post
-        key={1}
-        props={{
-          name: 'Lily Potter',
-          avatar: People_Lily,
-          image: Tree0,
-          date: '13-Jul-2021',
-          aboutMe: 'Mother of Harry Potter!\nKiller: Voldemort',
-          navigation: navigation.navigation,
-        }}
-      />
-      <Post
-        key={2}
-        props={{
-          name: 'Malay Bhavsar',
-          avatar: People_Malay,
-          image: Mountain1,
-          date: '11-Jul-2021',
-          aboutMe:
-            'Software Engineer || Full Stack Developer\nMERN Stack Developer\nMail:- malaybhavsar.290@gmail.com',
-          navigation: navigation.navigation,
-        }}
-      />
-      <Post
-        key={3}
-        props={{
-          name: 'Angelina Johnson',
-          avatar: People_Angelina,
-          image: Building,
-          date: '07-Jul-2021',
-          aboutMe: 'Public Figure! Daily Vlogs! Youtuber',
-          navigation: navigation.navigation,
-        }}
-      />
-      <Post
-        key={4}
-        props={{
-          name: 'Mike Thomson',
-          avatar: People_Mike,
-          image: Tree1,
-          date: '07-Jul-2021',
-          aboutMe: 'Hola Amigo! Hello My Friends',
-          navigation: navigation.navigation,
-        }}
-      />
-      <Post
-        key={5}
-        props={{
-          name: 'Queen Sofia',
-          avatar: People_Sofia,
-          image: Mountain2,
-          date: '05-Jul-2021',
-          aboutMe: 'Queen of Narnia!',
-          navigation: navigation.navigation,
-        }}
-      />
-    </View>
-  );
-};
-
-class Post extends Component {
+export default class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -264,5 +175,3 @@ class Post extends Component {
     );
   }
 }
-
-export {ShowPosts, Post};

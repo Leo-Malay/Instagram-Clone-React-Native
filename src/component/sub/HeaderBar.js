@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {Badge} from 'react-native-elements';
 import {IonIcons, FAIcons, FA5Icons} from './Icons';
 // Image
 import Instagram from '../../assets/Instagram.png';
@@ -51,6 +45,11 @@ const HomeHeader = ({navigation}) => {
         }}
         style={localStyle.Icons}>
         <FA5Icons props={{name: 'facebook-messenger', size: 25}} />
+        <Badge
+          value="2"
+          status="error"
+          containerStyle={{position: 'absolute', top: -5, right: -5}}
+        />
       </TouchableOpacity>
     </View>
   );
